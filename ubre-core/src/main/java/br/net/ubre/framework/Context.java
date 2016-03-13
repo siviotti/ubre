@@ -215,6 +215,7 @@ public class Context extends ContextElement implements Debuggable {
 		slang.getSyntagma().setBehaveMap(behaveMap);
 		for (Callable callable : callables.values()) {
 			callable.build(slang);
+			behaveMap.add(callable);
 		}
 		built = true;
 		return this;
@@ -239,8 +240,9 @@ public class Context extends ContextElement implements Debuggable {
 		((FreezableList<Rule>) rules).freeze();
 		((FreezableList<Process>) processes).freeze();
 		dataMap.freeze();
+		behaveMap.freeze();
 		lang.getSyntax().freeze(); // congela a sintaxe
-		slang.getSyntagma().freeze(); // congela o framework
+		slang.getSyntagma().freeze(); // congela a sintagma
 	}
 
 	private void copyToMap(List<? extends ContextElement> list, Map map) {

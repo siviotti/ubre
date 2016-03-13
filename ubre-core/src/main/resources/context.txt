@@ -1,8 +1,8 @@
 #Contexto
 context.ctx001=label="Contexto de teste"|begin=12/12/2000|end=12/12/2001
-context.ctx001.syntax=br.gov.serpro.ubre.lang.Syntax
-context.ctx001.syntagma=br.gov.serpro.ubre.slang.Syntagma
-context.ctx001.fieldFactory=br.gov.serpro.ubre.data.field.FieldFactory
+context.ctx001.syntax=br.net.ubre.lang.Syntax
+context.ctx001.syntagma=br.net.ubre.slang.Syntagma
+context.ctx001.fieldFactory=br.net.ubre.data.field.FieldFactory
 
 #Constants types = STRING, INTEGER, DECIMAL, BOOLEAN, DATE
 #const.NAME.TYPE=value 
@@ -269,20 +269,20 @@ message.MSG001=Teste de uma mensagem
 message.MSG002=Mensagem com variável ${nj} de subistituição
 
 #Rules
-rule.R001=label=Regra de teste|scope=Solicitacao
+rule.R001=label=Regra de teste|scope=Solicitacao|type=SCRIPT
 #rule.R001.if=2 + 5 > 6 || 2 - 1 == 1
 #rule.R001.action=print||'caiu n IF'
 #rule.R001.else
 rule.R001.code=print "teste regra R001"
 rule.R001.code=print "teste regra R001 linha 2"
 
-rule.R002=label=Regra de teste2|scope=Solicitacao
+rule.R002=label=Regra de teste2|scope=Solicitacao|type=SCRIPT
 rule.R002.code=print 'Regra R002 com print'
 
-rule.R003=label=Regra de Switch|scope=Solicitacao
-rule.R003.code=br.gov.serpro.ctd.framework.rule.body.TestBody
+rule.R003=label=Regra de Switch|scope=Solicitacao|type=STATIC
+rule.R003.code=br.net.ubre.framework.rule.body.TestBody
 
-rule.R004=label=Regra de Código|scope=Solicitacao
+rule.R004=label=Regra de Código|scope=Solicitacao|type=DYNAMIC
 
 #Processes
 process.CN01=label=Constituiçao de Entidade com Primeiro Estabelecimento|scope=SCP1

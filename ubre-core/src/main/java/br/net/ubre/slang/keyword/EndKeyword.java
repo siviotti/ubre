@@ -8,8 +8,10 @@ import br.net.ubre.lang.statement.StatementType;
  */
 public class EndKeyword extends ControlKeyword{
 
+	public static final String TOKEN = "end";
+
 	public EndKeyword() {
-		super("end", TargetType.NONE, StatementType.VOID);
+		super(TOKEN, TargetType.NONE, StatementType.VOID);
 	}
 
 }

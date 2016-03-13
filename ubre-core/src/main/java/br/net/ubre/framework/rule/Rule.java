@@ -32,8 +32,8 @@ public class Rule extends ContextElement implements Callable {
 	private Executable body; // SCRIPT - STATIC (Code) - DYNAMIC (Code)
 	private List<String> sourceLines;
 
-	public Rule(String id, String label, Date begin, Date end, String tags,
-			RuleType type, Scope scope, List<String> sourceLines) {
+	public Rule(String id, String label, Date begin, Date end, String tags, RuleType type, Scope scope,
+			List<String> sourceLines) {
 		super(id, label, begin, end, tags);
 		this.scope = scope;
 		this.sourceLines = sourceLines;
@@ -56,8 +56,7 @@ public class Rule extends ContextElement implements Callable {
 		} else if (RuleType.DYNAMIC.equals(type)) {
 			body = Reflect.findRuleBody(getId());
 		} else {
-			throw new CTDException(RULE_TYPE_MISSING
-					+ Arrays.toString(RuleType.values()));
+			throw new CTDException("[" + getId() + "] " + RULE_TYPE_MISSING + Arrays.toString(RuleType.values()));
 		}
 	}
 

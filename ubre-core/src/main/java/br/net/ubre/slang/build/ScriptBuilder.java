@@ -51,13 +51,13 @@ public class ScriptBuilder {
 		// Passo 1 - Parsing
 		List<CodeLine> plainLines = parser.parse(sourceLines);
 		// Passo 2 - Indenting
-		MainBlock block = new MainBlock(getSyntagma());
-		int lines = linkBlock(block, plainLines, 0);
+		MainBlock mainBlock = new MainBlock(getSyntagma());
+		int lines = linkBlock(mainBlock, plainLines, 0);
 		if (lines < plainLines.size()) {
 			String msg = String.format(SBUILD_INTERRUPTED, lines, plainLines.get(lines));
 			throw new SLangException(LangError.E30, msg);
 		}
-		Script script = new Script(block.getCodeLines());
+		Script script = new Script(mainBlock.getCodeLines());
 		return script;
 	}
 

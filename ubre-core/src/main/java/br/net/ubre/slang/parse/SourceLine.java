@@ -9,7 +9,10 @@ import br.net.ubre.slang.parse.predicate.Predicate;
 import br.net.ubre.slang.parse.predicate.PredicateFactory;
 
 /**
- * Representa uma linha de um código fonte que contém um CTDS (CTD Script).
+ * Representa uma linha de um código de um Script no seguinte formato:<BR>
+ * KEYWORD [TARGET] [PARAMETER] <br>
+ * Ou uma expressão no formato Lang.
+ * 
  * 
  * @author Douglas Siviotti (073.116.317-69)
  * @since 09/10/2015 00:00
@@ -24,7 +27,7 @@ public class SourceLine {
 	public SourceLine(Syntagma syntagma, int number, String originalSource) {
 		this.number = number;
 		String source = extractMetaline(originalSource.trim());
-		String predicateSource="";
+		String predicateSource = "";
 		if (syntagma.getKeywordSet().contains(source)) {
 			keyword = syntagma.getKeyword(source);
 		} else {
@@ -32,7 +35,7 @@ public class SourceLine {
 			keyword = syntagma.getKeyword(keywordToken);
 			predicateSource = Text.ac(source, SEP);
 		}
-		//System.out.println("keyword:" + keyword.getToken());
+		// System.out.println("keyword:" + keyword.getToken());
 		// Se primeiro token não é uma keyword explícita
 		if (keyword == null) {
 			// keyword será a instância de ExpressionKeyword
@@ -42,9 +45,9 @@ public class SourceLine {
 		}
 		predicate = new PredicateFactory().create(keyword, predicateSource, SEP);
 	}
-	
-	private String extractMetaline(String originalSource){
-		
+
+	private String extractMetaline(String originalSource) {
+
 		return originalSource;
 	}
 

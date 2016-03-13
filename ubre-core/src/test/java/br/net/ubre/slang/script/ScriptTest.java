@@ -50,7 +50,7 @@ public class ScriptTest {
 		return new StandardDataContainer("id", createDataMap());
 	}
 
-	//@Test
+	@Test
 	public void testBuild() {
 		List<String> source = new ArrayList<String>();
 		source.add("// Script com todos os tipos de linha");

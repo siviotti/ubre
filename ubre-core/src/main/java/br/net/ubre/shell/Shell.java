@@ -85,7 +85,8 @@ public class Shell {
 		if (commandLine.charAt(0) == SHELL_COMMAND_CHAR) {
 			return executeShellCommand(commandLine.substring(1));
 		} else if (script) {
-			if (commandLine.equals(new EndKeyword().getToken())) {
+			if (commandLine.equals(EndKeyword.TOKEN)) {
+				buffer.add(EndKeyword.TOKEN);
 				String result = executeScript(buffer);
 				buffer.clear();
 				return result;

@@ -10,6 +10,7 @@ import br.net.ubre.slang.command.Command;
 import br.net.ubre.slang.command.console.InputCommand;
 import br.net.ubre.slang.command.console.PrintCommand;
 import br.net.ubre.slang.command.etc.CallCommand;
+import br.net.ubre.slang.command.etc.InfoCommand;
 import br.net.ubre.slang.command.etc.PutCommand;
 import br.net.ubre.slang.command.field.CheckCommand;
 import br.net.ubre.slang.command.field.EnableCommand;
@@ -71,6 +72,7 @@ public class Syntagma extends GenericFreezable {
 		putCommand(new PrintCommand(System.out));
 		putCommand(new InputCommand(System.in));
 		putCommand(new PutCommand()); 
+		putCommand(new InfoCommand());
 	}
 
 	/**

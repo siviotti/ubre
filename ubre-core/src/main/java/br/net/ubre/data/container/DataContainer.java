@@ -52,6 +52,13 @@ public interface DataContainer {
 	 */
 	boolean contains(String token);
 
+	/**
+	 * Informa se o valor de um elemento (var ou field) é nulo.
+	 * 
+	 * @param token
+	 *            O token da variável ou do campo a ser testado.
+	 * @return <code>true</code> se for nulo ou <code>false</code> se não for.
+	 */
 	boolean isNull(String token);
 
 	/**

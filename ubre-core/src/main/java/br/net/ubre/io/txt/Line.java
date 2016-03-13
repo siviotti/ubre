@@ -8,6 +8,8 @@ import java.util.Map;
 import br.net.ubre.framework.Context;
 
 /**
+ * Representa uma linha do arquivo TXT no formato de propriedade (key=value)
+ * onde:<BR>
  * type.name[:item]=values
  * <P>
  * type=context,domain,metadata,rule,process<BR>
@@ -68,9 +70,7 @@ public class Line {
 	private void defineType(String line) {
 		lineType = LineType.get(type, item);
 		if (lineType == null) {
-			invalidLine(index,
-					"Inpossível definir o tipo da linha a partir de '"
-							+ getKey() + "'", line);
+			invalidLine(index, "Inpossível definir o tipo da linha a partir de '" + getKey() + "'", line);
 		}
 	}
 
@@ -141,8 +141,7 @@ public class Line {
 
 	public void addChild(Line line) {
 		if (!line.lineType.getParent().equals(lineType)) {
-			invalidLine(line.getIndex(), "Linha inválida após '" + getKey()
-					+ "' na linha anterior.", line.toString());
+			invalidLine(line.getIndex(), "Linha inválida após '" + getKey() + "' na linha anterior.", line.toString());
 		}
 		children.add(line);
 	}

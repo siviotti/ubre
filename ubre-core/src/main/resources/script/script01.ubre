@@ -14,5 +14,5 @@ else
   print 'X é 6 ou 8'
   y=4
 end
-
+//log 
 print 'Y='+y

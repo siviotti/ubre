@@ -2,12 +2,11 @@ package br.net.ubre.slang.code;
 
 import br.net.ubre.behave.Executable;
 import br.net.ubre.slang.parse.SourceLine;
-import br.net.ubre.util.Freezable;
 import br.net.ubre.util.GenericFreezable;
 
 /**
  * Representa uma linha compilada e executável do código de um script (ignorando
- * comantários). Uma linha de código pode ser um if, elseif, else, action, code,
+ * comentários). Uma linha de código pode ser um if, elseif, else, action, code,
  * switch ou qualquer outro tipo de instrução de execução. Toda linha de código
  * é um objeto executável.
  * 

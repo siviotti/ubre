@@ -3,6 +3,8 @@ package br.net.ubre.slang.script;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Test;
+
 import br.net.ubre.data.container.DataContainer;
 import br.net.ubre.data.container.StandardDataContainer;
 import br.net.ubre.data.map.DataMap;
@@ -12,7 +14,6 @@ import br.net.ubre.lang.Lang;
 import br.net.ubre.lang.Syntax;
 import br.net.ubre.slang.Syntagma;
 import br.net.ubre.slang.build.ScriptBuilder;
-import br.net.ubre.slang.script.Script;
 
 /**
  * @author Douglas Siviotti (073.116.317-69).
@@ -41,7 +42,7 @@ public class ScriptPerformanceTest {
 	}
 
 
-	//@Test
+	@Test
 	public void script() {
 		List<String> source = new ArrayList<String>();
 		source.add("x = 7");
