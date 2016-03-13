@@ -1,0 +1,18 @@
+// Script 01
+x = 7
+y = 0
+if x > 10
+  print 'Maior que 10'
+  y=1
+elseif  x < 5
+  print 'Menor que 5'
+  y=2
+elseif x == 7 || x== 9
+  print 'X é 7 ou 9'
+  y=3
+else
+  print 'X é 6 ou 8'
+  y=4
+end
+
+print 'Y='+y

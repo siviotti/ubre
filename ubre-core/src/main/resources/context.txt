@@ -1,0 +1,292 @@
+#Contexto
+context.ctx001=label="Contexto de teste"|begin=12/12/2000|end=12/12/2001
+context.ctx001.syntax=br.gov.serpro.ubre.lang.Syntax
+context.ctx001.syntagma=br.gov.serpro.ubre.slang.Syntagma
+context.ctx001.fieldFactory=br.gov.serpro.ubre.data.field.FieldFactory
+
+#Constants types = STRING, INTEGER, DECIMAL, BOOLEAN, DATE
+#const.NAME.TYPE=value 
+const.MAX_SIZE.INTEGER=10
+const.START={12/12/2000}
+const.END=START + 5
+const.EXP=MAX_SIZE > 5
+
+#Variables
+var.usercpf.TEXT=00000000000
+var.x.INTEGER=0
+var.y.INTEGER=0
+var.z.INTEGER=0
+
+#Domains
+domain.nj=label=Natureza "kk"Jurídica|idType=STRING
+domain.nj.meta=mercantil=BOOLEAN|exigeCapital=BOOLEAN|maxSocios=INTEGER|descricao=TEXT(100)
+domain.nj.101-5=label=Órgão Público do Poder Executivo Federal|mercantil=false
+domain.nj.102-3=label=Órgão Público do Poder Executivo Estadual ou do Distrito Federal
+domain.nj.206-2=label=Sociedade Empresária Limitada
+domain.nj.303-4=label=Serviço Notarial e Registral (Cartório)
+domain.nj.306-9=label=Fundação Privada
+
+domain.Qualificacao=label=Qualificação|idType=INTEGER
+domain.Qualificacao.meta=representante=BOOLEAN|exigeRepresentante=BOOLEAN|representantes=LIST
+domain.Qualificacao.01=label=Acionista
+domain.Qualificacao.02=label=Acionista Controlador
+domain.Qualificacao.03=label=Acionista Diretor
+domain.Qualificacao.04=label=Acionista Presidente
+domain.Qualificacao.05=label=Administrador
+domain.Qualificacao.06=label=ADM. CONSORCIO EMPRESAS/GRUPO EMPRESAS
+domain.Qualificacao.07=label=COMISSARIO
+domain.Qualificacao.08=label=CONSELHEIRO DE ADMINISTRACAO
+domain.Qualificacao.09=label=CURADOR
+domain.Qualificacao.10=label=DIRETOR
+domain.Qualificacao.11=label=INTERVENTOR
+domain.Qualificacao.12=label=INVENTARIANTE
+domain.Qualificacao.13=label=LIQUIDANTE
+domain.Qualificacao.14=label=MAE
+domain.Qualificacao.15=label=PAI
+domain.Qualificacao.16=label=PRESIDENTE
+domain.Qualificacao.17=label=PROCURADOR
+domain.Qualificacao.18=label=SECRETARIO
+domain.Qualificacao.19=label=SINDICO (CONDOMINIO)
+domain.Qualificacao.20=label=SOCIEDADE CONSORCIADA
+domain.Qualificacao.21=label=SOCIEDADE FILIADA
+domain.Qualificacao.22=label=SOCIO
+domain.Qualificacao.23=label=SOCIO CAPITALISTA
+domain.Qualificacao.24=label=SOCIO COMANDITADO
+domain.Qualificacao.25=label=SOCIO COMANDITARIO
+domain.Qualificacao.26=label=SOCIO DE INDUSTRIA
+domain.Qualificacao.27=label=SOCIO RESIDENTE OU DOMICILIADO NO EXTERIOR
+domain.Qualificacao.28=label=SOCIO-GERENTE
+domain.Qualificacao.29=label=SOCIO INCAPAZ OU RELAT. INCAPAZ (EXCETO MENOR)
+domain.Qualificacao.30=label=SOCIO OU ACIONISTA MENOR(ASSISTIDO/REPRESENTADO)
+domain.Qualificacao.31=label=SOCIO OSTENSIVO
+domain.Qualificacao.32=label=TABELIAO
+domain.Qualificacao.33=label=TESOUREIRO
+domain.Qualificacao.34=label=TITULAR DE EMPRESA INDIVIDUAL IMOBILIARIA
+domain.Qualificacao.35=label=TUTOR
+domain.Qualificacao.36=label=GERENTE DELEGADO
+domain.Qualificacao.37=label=SOCIO PESSOA JURIDICA DOMICILIADO NO EXTERIOR
+domain.Qualificacao.38=label=SOCIO P.FISICA RESID. OU DOMICILIADO NO EXTERIOR
+domain.Qualificacao.39=label=DIPLOMATA
+domain.Qualificacao.40=label=CONSUL
+domain.Qualificacao.41=label=REPRESENTANTE DE ORGANIZACAO INTERNACIONAL
+domain.Qualificacao.42=label=OFICIAL DE REGISTRO
+domain.Qualificacao.43=label=RESPONSAVEL
+domain.Qualificacao.44=label=SOCIO PARTICIPANTE
+domain.Qualificacao.45=label=SOCIO INVESTIDOR
+domain.Qualificacao.46=label=MINISTRO DE ESTADO DAS RELACOES EXTERIORES
+domain.Qualificacao.47=label=SOCIO PESSOA FISICA RESIDENTE NO BRASIL
+domain.Qualificacao.48=label=SOCIO PESSOA JURIDICA DOMICILIADO NO BRASIL
+domain.Qualificacao.49=label=SOCIO-ADMINISTRADOR
+domain.Qualificacao.50=label=EMPRESARIO
+domain.Qualificacao.51=label=CANDITADO A CARGO POLITICO ELETIVO
+domain.Qualificacao.52=label=SOCIO COM CAPITAL
+domain.Qualificacao.53=label=SOCIO SEM CAPITAL
+domain.Qualificacao.54=label=FUNDADOR
+domain.Qualificacao.55=label=SOCIO COMANDITADO RESIDENTE NO EXTERIOR
+domain.Qualificacao.56=label=SOCIO COMANDITARIO P.FISICA RESIDENTE EXTERIOR
+domain.Qualificacao.57=label=SOCIO COMANDITARIO P.JURIDICA DOMICIL. EXTERIOR
+domain.Qualificacao.58=label=SOCIO COMANDITARIO INCAPAZ
+domain.Qualificacao.59=label=PRODUTOR RURAL
+domain.Qualificacao.60=label=CONSUL HONORARIO
+domain.Qualificacao.61=label=RESPONSAVEL INDIGENA
+domain.Qualificacao.62=label=REPRESENTANTE DAS INSTITUICOES EXTRATERRITORIAIS
+domain.Qualificacao.63=label=COTAS EM TESOURARIA
+domain.Qualificacao.64=label=ADMNISTRADOR JUDICIAL
+domain.Qualificacao.65=label=TITULAR P.FISICA RESID. OU DOMICILIADO NO BRASIL
+domain.Qualificacao.66=label=TITULAR P.FISICA RESID. OU DOMICILIADO EXTERIOR
+domain.Qualificacao.67=label=TITULAR P.FISICA INCAPAZ OU RELAT.(EXCETO MENOR)
+domain.Qualificacao.68=label=TITULAR P.FISICA MENOR (ASSISTIDO/REPRESENTADO)
+
+domain.situcad=label=Situação Cadastral|idType=INTEGER
+domain.situcad.meta=mercantil=BOOLEAN|exigeCapital=BOOLEAN|maxSocios=INTEGER|descricao=TEXT(100)
+domain.situcad.100=label=Ativa_
+domain.situcad.200=label=Inativa
+
+#Metadatas
+meta.NU_CNPJ=label=Número do CNPJ|description=Este campo foi substituído pela composição NU_CNPJ_RAIZ”/”NU_CNPJ_ESTABEL”-”DV|type=TEXT|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_RAIZ=label=Número do CNPJ Raíz|description=Nº  Identificador da Entidade isolado do nº identificador do estabelecimento e do Dígito Verificador (DV)|type=TEXT|size=8|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_ORDEM=label=Número de ordem do CNPJ|description=Nº  Identificador isolado do estabelecimento. |type=TEXT|size=4|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_DV=label=Dígito verificador do CNPJ|description=Nº do Dígito Verificador (DV) calculado para cada estabelecimento|type=DECIMAL|size=2|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.TIPO_ESTAB=label=Tipo de estabelecimento|description=Identifica o tipo de estabelecimento  dentre as possibilidades:matriz;filial;contrato de representação de investidor estrangeiro;patrimônio de afetação.|type=DECIMAL|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.INDICA_ESTAB_DOM_TRIB=label=Número de ordem do domicílio tributário|description=Identifica o nº de ordem do estabelecimento eleito como domicilio tributário.|type=DECIMAL|size=4|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.QUANT_ESTAB=label=Quantidade de estabelecimentos|description=Campo dinâmico para mostrar o resultado da funcionalidade que conta, no momento da consulta, quantos estabelecimentos a entidade possui.|type=DECIMAL|size=5|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.QT_EST_AT=label=Quantidade de estabelecimentos ativos|description=Campo dinâmico para mostrar o resultado da funcionalidade que conta, no momento da consulta, quantos estabelecimentos ATIVOS a entidade possui.|type=DECIMAL|size=5|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.QT_EST_BX=label=Quantidade de estabelecimentos baixados|description=Campo dinâmico para mostrar o resultado da funcionalidade que conta, no momento da consulta, quantos estabelecimentos BAIXADOS a entidade possui.|type=DECIMAL|size=5|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.QT_EST_SUSP=label=Quantidade de estabelecimentos suspensos|description=Campo dinâmico para mostrar o resultado da funcionalidade que conta, no momento da consulta, quantos estabelecimentos SUSPENSOS a entidade possui.|type=DECIMAL|size=5|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_EMPRESARIAL=label=Nome empresarial|description=Nome Empresarial|type=TEXT|size=300|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PART_PORTE=label=Partícula para Porte Formal|description=Partícula a ser agregada ao Nome Empresarial em razão do Porte Formal.Poderá ser na forma abreviada ou extensa.|type=TEXT|size=24|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PART_NJ=label=Partícula para Natureza Jurídica|description=Partícula a ser agregada ao Nome Empresarial em razão da NJ.|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PART_TRAT_TRIB=label=Partícula para Tratamento Tributário|description=Partícula a ser agregada ao Nome Empresarial em razão do Tratamento Tributário.|type=TEXT|size=11|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PART_SIT_ESP=label=Partícula para Situação Especial|description=Partícula a ser agregada ao Nome Empresarial em razão de Situação Especial.|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_ENTIDADE=label=Nome da Entidade|description=Nome da Entidade.Campo resultado, para exibição e saída (para demais ambientes), da funcionalidade de agregará os campos NM_EMPRESARIAL PART_TRAT_TRIB PART_NJ PART_PORTE PART_SIT_ESP.|type=TEXT|size=11|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_FANTASIA=label=Nome Fantasia|description=Nome Fantasia da Entidade|type=TEXT|size=55|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_DENOMINA_ESTAB=label=Nome do Estabelecimento|description=Denominação do estabelecimento|type=TEXT|size=55|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_NJ=label=Código da Natureza Jurídica|description=Código da Natureza Jurídica|type=DECIMAL|size=4|format=|domain=nj|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_NJ=label=Descrição da Natureza Jurídica|description=Descrição da Natureza Jurídica correspondente ao CO_NJ informado|type=TEXT|size=30|format=|domain=nj|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_ORG_ORIG_ATO=label=Código do órgão de origem do ato|description=Origem do Ato (em substituição ao campo Tipo de Órgão de Registro para abarcar os atos publicados em Diário Oficial):Exemplo de valores deste domínio: Junta Comercial; OAB, Cartórios, DOU, DOE, DOM (onde tiver);|type=DECIMAL|size=3|format=|domain=Origem do Ato|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_ORG_ORIG_ATO=label=Nome do órgão de origem do ato|description=Descrição correspondente a cada um dos CO_ORIG_ATO|type=TEXT|size=300|format=|domain=Origem do Ato|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.TP_ATO_OPERACAO=label=Tipo de ato formal|description=Identifica os tipos de atos formais admitidos para embasarem mutações dos dados cadastrais. Os tipos de atos atuais são:INSCRIÇÃO ENTIDADE;ABERTURA DE DEMAIS ESTABELECIMENTOS;ALTERAÇÃO;BAIXA DEMAIS ESTABELECIMENTOS;BAIXA ENTIDADE;SUCESSÕES.|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_NIRE=label=Número Registro na Junta Comercial|description=Nº Registro na Junta Comercial|type=DECIMAL|size=11|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_REGISTRO_ATO=label=Número de Registro ou Ato Legal |description=Nº Registro Org. Reg. Específico ou Ato Legal|type=DECIMAL|size=25|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_ASSINA_ATO=label=Data de Assinatura do ato|description=Data de Assinatura do ato|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_ADE=label=Número ADE|description=Ato legal da Administração Tributária que altera o cadastro (ADE)|type=DECIMAL|size=4|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.UL_EXP_ADE=label=UA ou UL de emissão do ADE|description=Nome da Unidade Administrativa ou Local da RFB responsável pela emissão do ADE|type=TEXT|size=6|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_PUBLIC_ADE=label=Data da publicação do ato legal|description=Data da publicação do ato legal|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_EFEITO_ADE=label=Data do efeito do ato legal|description=Data do efeito do ato legal|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_PROC_ADM=label=Número do processo motivador da alteração|description=número do processo que motivou a alteração cadastral|type=DECIMAL|size=17|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_CONSTITUICAO=label=Data de Constituição da Entidade|description=Data de Constituição da Entidade|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_ABERTURA=label=Data de Abertura do Estabelecimento|description=Data de Abertura do Estabelecimento|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_EXTINCAO=label=Data de Extinção da Entidade|description=Data de Extinção da Personalidade Jurídica da Entidade|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_BAIXA=label=Data de baixa de estabelecimento|description=Data de baixa de estabelecimento, com manutenção da personalidade jurídica da Entidade|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_SITUACAO_CADASTRAL=label=Data da situação cadastral atual|description=Data da atribuição da situação cadastral atual|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_PRIM_VINCULO=label=Data de primeiro vínculo|description=Data de primeiro vínculo|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.VL_CAPITAL_SOCIAL=label=Valor do Capital Social|description=Valor do Capital Social da entidade|type=DECIMAL|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_SITUACAO_CADASTRAL=label=Código da Situação Cadastral|description=Código das Situações Cadastrais|type=DECIMAL|size=2|format=|domain=Situação Cadastral|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_SITUACAO_CADASTRAL=label=Situação Cadastral|description=Descrição das Situações Cadastrais |type=TEXT|size=8|format=|domain=Situação Cadastral|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_MOTIVO_SIT_CADASTRAL=label=Código do Motivo da Situação Cadastral|description=Código dos Motivos das Situações Cadastrais|type=DECIMAL|size=2|format=|domain=Motivo de Situação Cadastral|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_MOTIVO_SIT_CADASTRAL=label=Motivo da Situação Cadastral|description=Conforme previsão da IN para as situações de Ativa, Suspensa, Inapta, Baixada, Nula|type=TEXT|size=30|format=|domain=Motivo de Situação Cadastral|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_SITUACAO_ESPECIAL=label=Código da Situação Especial|description=Código das Situações Especiais|type=DECIMAL|size=2|format=|domain=Situação Especial|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_SITUACAO_ESPECIAL=label=Situação especial|description=Campo para identificar se a Entidade encontra-se em: Falência, Insolvência Civil, Liquidação Judicial ou Extrajudicial, Recuperação Judicial.|type=TEXT|size=30|format=|domain=Situação Especial|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_ENTE_FEDERATIVO_RESPONSAVEL=label=Código do ente federativo responsável|description=União, Estados ou Municípios|type=TEXT|size=4|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_TIPO_ESTATAL=label=Código tipo estatal|description=1 – Dependente;2 – Não Dependente|type=TEXT|size=1|format=|domain=Tipo de Estatal|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_TIPO_ESTATAL=label=Tipo estatal|description=DEPENDENTE OU NÃO DEPENDENTE|type=TEXT|size=14|format=|domain=Tipo de Estatal|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.OBJETO_SOCIAL=label=Objeto social|description=Descrição do Objeto Social|type=TEXT|size=0|format=TEXTO_LONGO|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CNAE_PRINCIPAL=label=CNAE Principal|description=CNAE principal|type=TEXT|size=7|format=|domain=CNAE|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CNAES_SECUNDARIAS=label=CNAE's Secundárias|description=CNAE secundária|type=TEXT|size=7|format=|domain=CNAE|frame=|form=|array=true|persistent=false|begin=|end=|tags=
+meta.CO_ATIV_CNAE=label=Códigos CNAE|description=Relação de Códigos CNAE vinculados à Entidade com índices (indicadores) para identificar cada um como: com base no Objeto Social, portanto, informado pelo contribuinte: PRINCIPAL ou SECUNDÁRIO;com base em informação do contribuinte, porém sem “lastro” formal , mas dentre as SECUNDÁRIAS, pois a PRINCIPAL será marcada sempre como EXERCICO:EXERCIDO ou NÃO EXERCIDO;motivado pela RFB:ESTUDO (Comac);OFÍCIO (em razão da ação fiscal ou procedimento interno, manual ou automatizado.)|type=DECIMAL|size=7|format=|domain=CNAE|frame=|form=|array=true|persistent=false|begin=|end=|tags=
+meta.ATIV_CNAE=label=cnae|description=Descrição do CO_ATIV_CNAE |type=TEXT|size=300|format=|domain=CNAE|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_ATIV_CNAE_VEDADA=label=Código CNAE vedada|description=Tabela para armazenar CNAE que representam atividades não permitidas. Ex.: atividade de bingo, CNAE 9200-3/01, não permitida para exercício no Brasil, conforme Lei nº 9.981/2000.|type=DECIMAL|size=7|format=|domain=CNAE|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_TP_UNID=label=Código do Tipo de unidade|description=Código do Tipo de Unidade|type=DECIMAL|size=1|format=|domain=Tipo de Unidade|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_TP_UNID=label=Tipo de unidade|description=Tipo de unidade que pode assumir um dos valores:PRODUTIVA;AUXILIAR;Construir a estrutura do domínio da tabela com capacidade de admitir novos valores.|type=TEXT|size=10|format=|domain=Tipo de Unidade|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_TP_UNID_AUX=label=Código do Tipo de unidade auxiliar|description=Código do Tipo de Unidade Auxiliar|type=DECIMAL|size=2|format=|domain=Tipo de Unidade Auxiliar|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_TP_UNID_AUX=label=Tipo de unidade auxiliar|description=- Classificação do tipo de unidade AUXILIAR.|type=TEXT|size=15|format=|domain=Tipo de Unidade Auxiliar|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_FORMA_ATUACAO=label=Código da Forma de Atuação empresarial|description=Código da Forma de Atuação empresarial|type=DECIMAL|size=2|format=|domain=Forma de Atuação|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_FORMA_ATUACAO=label=Forma de atuação empresarial|description=Formas de atuação empresarial (pode ser mais de uma)|type=TEXT|size=45|format=|domain=Forma de Atuação|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.END_DOMIC_EXTERIOR=label=Endereço de PJ estrangeira|description=Campo sem formatação para endereço da PJ estrangeira|type=TEXT|size=300|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_PAIS=label=País|description=Nome do País de localização.Nome do pais classificado pelo código do item anterior.|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_PAIS=label=Código do País|description=Código de País de localização.Código do pais classificado pelo código do item anterior.|type=DECIMAL|size=3|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_TP_LOCALIZACAO=label=Tipo de localização|description=Indica qual o tipo de localização a ser utilizado. Admite mais de um tipo. São tipos de localização: ECT: disponibiliza o rol das siglas dos estados + DF e o padrão de localização ECT; EXTERIOR: disponibiliza a lista de países e o padrão de localização de domiciliada no exterior.|type=DECIMAL|size=1|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.TIPO_LOGRADOURO=label=Tipo de logradouro|description=Nome do tipo de logradouro|type=TEXT|size=20|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.TITULO_LOGRADOURO=label=Título do logradouro|description=Título honorífico do nome do logradouro|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PREP_LOGRADOURO=label=Preposição do logradouro|description=Elemento de ligação entre o título honorífico e o nome do logradouro|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_LOGRADOURO=label=Logradouro|description=Nome do Logradouro|type=TEXT|size=60|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_LOGRADOURO=label=Número|description=Numero do logradouro|type=DECIMAL|size=6|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.COMPLEMENTO_1=label=Complemento 1|description=Nome do complemento do endereço.(são elementos usados para identificaro detalhamento do lote (nº do imóvel), ao longo do logradouro. Ex.: bloco, edifício, conjunto)|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.COMPLEMENTO_2=label=Complemento 2|description=Nome do complemento do endereço.(são elementos usado para identificar o detalhamento do COMPLEMENTO 1 ao longo do logradouro. Ex.: entrada, andar piso, pavimento, etc)|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.UNID_OCUPACAO=label=Unidade de ocupação|description=(identifica o menor nível do endereço para o caso de edificações de uso coletivo. Ex.: apartamento, sala, loja, quitinete).|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_BAIRRO=label=Bairro|description=Nome do Bairro referente ao Logradouro (4)|type=TEXT|size=40|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_MUNICIPIO=label=Município|description=Código do Município sem DV (TOM)|type=DECIMAL|size=4|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_CIDADE=label=Cidade|description=Nome da CIDADE do padrão ECT equivalente ao Nome do Município (TOM).|type=TEXT|size=55|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_UF=label=UF|description=Código de UF|type=TEXT|size=2|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CEP_LOGRADOURO=label=CEP|description=Código de Endereçamento Postal|type=DECIMAL|size=13|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_DDD=label=DDD|description=CÓDIGO DDD|type=DECIMAL|size=2|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_TELEFONE=label=Telefone|description=Número de telefone|type=DECIMAL|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CORREIO_ELETRONICO=label=Email|description=Correio eletrônico|type=TEXT|size=80|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.LATITUDE=label=Latitude|description=Valor da coordenada georeferenciada de latitude com quatro casas decimais|type=TEXT|size=6|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.LONGITUDE=label=Longitude|description=Valor da coordenada georeferenciada de longitude com quatro casas decimais|type=TEXT|size=6|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_ORGAO_JURISDICIONANTE=label=Código do órgão jurisdicionante|description=Códigos das Unidades Locais da RFB|type=DECIMAL|size=7|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_ORGAO_JURISDICIONANTE=label=Órgão jurisdicionante|description=Descrição (Sigla) do órgão jurisdicionante|type=TEXT|size=30|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_ORG_ADUANEIRO=label=Código do órgão aduaneiro|description=Códigos de unidades da RFB|type=DECIMAL|size=7|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_ORG_ADUANEIRO=label=Órgão aduaneiro|description=Descrição (Sigla) do órgão aduaneiro|type=TEXT|size=30|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_PFN=label=Código do órgão da PFN|description=Código do órgão da PFN vinculado a uma determinada Unidade Local|type=DECIMAL|size=7|format=|domain=Classificação PGFN|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_PFN=label=Órgão da PFN|description=Nome do órgão da PFN vinculado a uma determinada Unidade Local|type=TEXT|size=30|format=|domain=Classificação PGFN|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.IN_INTERESSE_FISCAL=label=Indicador de interesse fiscal|description=Indicador de interesse fiscal no contribuinte|type=DECIMAL|size=1|format=|domain=Interesse Fiscal|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.OPCAO_DTE=label=Optante pelo DTE|description=Optante ou Não Optante pelo DTE|type=BOOLEAN|size=1|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PORTE_ATRIBUIDO=label=Porte atribuído|description=Este atributo identifica qual o porte apurado em razão dos valores de receita bruta informados em Declarações|type=TEXT|size=6|format=|domain=Porte|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PORTE_FORMAL=label=Porte formal|description=este atributo indica o porte declarado da empresa|type=TEXT|size=6|format=|domain=Porte|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_INC_SIMPLES_NACIONAL=label=Data de inclusão no SIMPLES|description=Data de inclusão no SIMPLES|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_EXC_SIMPLES_NACIONAL=label=Data de exclusão do SIMPLES|description=Data de exclusão do SIMPLES|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.TRAT_TRIB=label=Tratamento Tributário|description=Identifica a espécie de Tratamento Tributário a qual a entidade está submetida. Atualmente os valores são: Simples Nacional; Simei.|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_INC_SIMEI=label=Data de inclusão no SIMEI|description=Data de inclusão no SIMEI|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_EXC_SIMEI=label=Data de exclusão do SIMEI|description=Data de exclusão do SIMEI|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_SUCESSAO=label=Data da sucessão|description=Data informada da operação de sucessão|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.IND_TIPO_OPERACAO_SUCESSAO=label=Operação de sucessão|description=Este atributo identifica qual foi a operação de sucessão efetuada para esta empresa|type=DECIMAL|size=1|format=|domain=Operação de Sucessão|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_SUCEDIDA=label=CNPJ da sucedida|description=CNPJ da entidade que foi sucedida pela que se esta consultando|type=TEXT|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_SUCESSORA=label=CNPJ da sucessora|description=CNPJ da entidade que sucedeu a que se esta consultando|type=TEXT|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NIRF=label=Número do imóvel rural (NIRF)|description=Capta os nº do imóvel rural (Nirf) vinculado ao Produtor Rural a partir da base externa CAFIR|type=DECIMAL|size=8|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.ORG_REGULADOR=label=Órgão regulador|description=Domínio dos órgãos reguladores de atividades e que, através de convênio, conferem e encaminham dados a serem inscritos na base CNPJ.Valores atuais: CVM, Bacen, Tribunais Eleitorais.|type=DECIMAL|size=2|format=|domain=Órgão Regulador|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.UNIDADE_MONETARIA=label=Unidade monetária|description=unidade monetária corrente|type=TEXT|size=2|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.ACOMP_ESPECIAL=label=Acompanhamento especial|description=|type=BOOLEAN|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.ACOMP_DIFERENCIADO=label=Acompanhamento diferenciado|description=|type=BOOLEAN|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.ESTABELECIMENTO_UNIFICADOR=label=Estabelecimento unificador|description=|type=BOOLEAN|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.EQUIPARADO_A_INDUSTRIAL=label=Equiparado a estabelecimento industrial|description=Valores admitidos para esta campo: vazio para não equiparado; por opção, se informado pelo contribuinte; de ofício, se atribuído em procedimento fiscal (com vínculo a processo administrativo fiscal)|type=DECIMAL|size=1|format=|domain=Equiparação Industrial|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_VINCULO_IMOVEL=label=Código de vínculo com o imóvel|description=Código de vínculo com o imóvel (específico para produtor rural)|type=DECIMAL|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_VALIDADE_CONTRATO=label=Data da validade da inscrição|description=Data da validade da inscrição (específico para produtor rural)|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.IN_CPF_CNPJ_PROPRIETARIO_RURAL=label=Proprietário rural|description=Proprietário rural (específico para produtor rural)|type=BOOLEAN|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CPF_CNPJ_PROPRIETARIO_RURAL=label=CPF/CNPJ do proprietário rural|description=CPF/CNPJ do proprietário rural (específico para produtor rural)|type=TEXT|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_TIPO_ORGAO_REGISTRO=label=Tipo do órgão de registro|description=Tipo do órgão de registro|type=DECIMAL|size=1|format=|domain=Tipo de Órgão de Registro|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_REGISTRO_ORGAO=label=Número de registro no órgão|description=Número de registro no órgão|type=DECIMAL|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_INSCRICAO_ESTADUAL_ANTERIOR=label=Inscrição estadual anterior|description=Inscrição estadual anterior|type=DECIMAL|size=9|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NI_INTEGRANTE=label=Número de identificação do integrante|description=Numero de identificação do integrante do QI, que poderá ser CNPJ ou CPF|type=DECIMAL|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_INTEGRANTE=label=Nome do integrante|description=Preenchido dinamicamente com o: Nome Empresarial, para NI = CNPJ; Nome, para NI = CPF|type=TEXT|size=200|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_INCLUSAO_INTEGRANTE=label=Data de inclusão do integrante|description=Data de início do participante no QI|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_ALTERACAO_INTEGRANTE=label=Data de alteração do integrante|description=Data na qual alguma informação da participação do integrante tenha sido modificada|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_EXCLUSAO_INTEGRANTE=label=Data de exclusão do integrante|description=Data fim do participante no QI|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.CO_QUALIFICACAO_INTEGRANTE=label=Código da Qualificação do Integrante|description=Código da Qualificação dos Integrantes e dos Representantes de Integrantes.|type=DECIMAL|size=3|format=|domain=Qualificacao|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.QUALIFICACAO_INTEGRANTE=label=Qualificação do Integrante|description=Qualificação do integrante com ou sem participação ou administrador que conste do Contrato Social, Estatuto ou outro documento consignado no respectivo Órgão de Registro ou publicado|type=TEXT|size=20|format=|domain=Qualificação|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.QUAL_ESPECIAL_INTEGRANTE=label=Qualificação de Sit. Especial|description=Exibe o enquadramento em situação especial do integrante quando ocorre um Situação Especial na Entidade em que participam. Deverá ser mostrado somente quando houver valor e simultaneamente à qualificação do integrante.Incide somente qualificação de “sócio”.|type=TEXT|size=20|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CPF_REPRESENT_INTEGRANTE=label=CPF do representante |description=CPF do representante legal do sócio|type=DECIMAL|size=11|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_CPF_REPRESENT_INTEGRANTE=label=Nome do representante|description=Nome do representante|type=TEXT|size=55|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_INCLUSAO_REPRES_INTEGRANTE=label=Data de inclusão do representante|description=Data de início do ato de representação|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_EXCLUSAO_REPRES_INTEGRANTE=label=Data de exclusão do representante|description=Data fim do ato de representação|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.QUALIFICACAO_REPRESENTANTE=label=Qualificação do representante|description=Qualificação do Representante Legal|type=TEXT|size=20|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.VL_PARC_CAPITAL_SOCIAL=label=Valor da participação do integrante|description=Valor da participação do sócio no Capital Social|type=DECIMAL|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.PERCENTUAL_PARC_CAPITAL_SOCIAL=label=Percentual de capital social do integrante|description=corresponde ao percentual de capital social do sócio|type=DECIMAL|size=4|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CPF_REPRESENTANTE_ESTABELECIMENTO=label=CPF do representante do estabelecimento|description=Representante específico de estabelecimento, em especial para Órgãos Públicos|type=DECIMAL|size=11|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_REPRESENTANTE_ESTABELECIMENTO=label=Nome do representante do estabelecimento|description=Nome do representante do estabelecimento|type=TEXT|size=20|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CPF_CONTADOR=label=CPF do contador|description=numero do CPF do contador responsável pela contabilidade da empresa|type=DECIMAL|size=11|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_CPF_CONTADOR=label=Nome do contador|description=Nome correspondente ao NU_CPF_CONTADOR|type=TEXT|size=20|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CRC_CONTADOR_PF=label=Número do CRC do contador|description=número do CRC do contador|type=DECIMAL|size=8|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_EMP_CONTABILIDADE=label=CNPJ da empresa de contabilidade|description=numero do CNPJ da empresa que é responsável pela contabilidade|type=DECIMAL|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_CNPJ_EMP_CONTABILIDADE=label=Nome empresarial da empresa de contabilidade|description=Nome Empresarial correspondente ao NU_CNPJ_EMP_CONTABILIDADE|type=TEXT|size=300|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_ADMINISTRADOR=label=Numero de identificação do Adm. Fundos e Clubes de Invest.|description=Numero de identificação do Adm. Fundos e Clubes de Invest.|type=DECIMAL|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_ADM_PJ=label=Razão Social do Adm. Fundos e Clubes de Invest.|description=Razão Social do Adm. Fundos e Clubes de Invest.|type=TEXT|size=200|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CNPJ_INCORPORADOR_IMOB=label=Número de identificação do Incorporador Imobiliário|description=Numero de identificação do Incorporador Imobiliário|type=DECIMAL|size=14|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NM_INCORPORADOR_IMOB=label=Razão Social do Incorporador Imobiliário|description=Razão Social do Incorporador Imobiliário|type=TEXT|size=200|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.NU_CPF_PREPOSTO=label=CPF Preposto|description=Obs: Caso os eventos 237, 238, 239 e 240 não migrem para o Integrador Estadual|type=TEXT|size=0|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+meta.DT_RECEPCAO_DOC=label=Data de alteração do integrante|description=Data Recepção do Documento|type=DATE|size=10|format=|domain=|frame=|form=|array=false|persistent=false|begin=|end=|tags=
+
+#Scopes
+scope.Integrante=label=Integrante
+scope.Integrante.fields=NI_INTEGRANTE|NM_INTEGRANTE|CO_QUALIFICACAO_INTEGRANTE
+scope.Integrante.lists=
+
+scope.Socio=label=Sócio|parent=Integrante
+scope.Socio.fields=QUALIFICACAO_REPRESENTANTE
+scope.Socio.lists=
+
+scope.Solicitacao=label=Solicitação|
+scope.Solicitacao.fields=CO_NJ|NM_EMPRESARIAL
+scope.Solicitacao.lists=Integrante
+
+scope.Contabilista=label=Contabilista|parent=Socio
+scope.Contabilista.fields=NM_CPF_CONTADOR|NU_CPF_CONTADOR
+scope.Contabilista.lists=
+
+
+#Messages
+message.MSG001=Teste de uma mensagem
+message.MSG002=Mensagem com variável ${nj} de subistituição
+
+#Rules
+rule.R001=label=Regra de teste|scope=Solicitacao
+#rule.R001.if=2 + 5 > 6 || 2 - 1 == 1
+#rule.R001.action=print||'caiu n IF'
+#rule.R001.else
+rule.R001.code=print "teste regra R001"
+rule.R001.code=print "teste regra R001 linha 2"
+
+rule.R002=label=Regra de teste2|scope=Solicitacao
+rule.R002.code=print 'Regra R002 com print'
+
+rule.R003=label=Regra de Switch|scope=Solicitacao
+rule.R003.code=br.gov.serpro.ctd.framework.rule.body.TestBody
+
+rule.R004=label=Regra de Código|scope=Solicitacao
+
+#Processes
+process.CN01=label=Constituiçao de Entidade com Primeiro Estabelecimento|scope=SCP1
+process.CN01.init=R001|R002
+process.CN01.edit=R002
+process.CN01.save=R002|R001
+process.CN01.check=R001
